@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Lock, User, KeyRound, X, AlertCircle, Loader2 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 export default function AdminLogin({ isOpen, onClose, onLoginSuccess }) {
   const [username, setUsername] = useState("");
