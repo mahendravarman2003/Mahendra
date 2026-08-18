@@ -3,6 +3,8 @@ import {createRoot} from "react-dom/client";
 import {ArrowUpRight, BrainCircuit, Code2, Database, Download, Github, GraduationCap, Mail, MapPin, Menu, Phone, X, BarChart3, ExternalLink} from "lucide-react";
 import "./styles.css";
 
+import profileImg from "./assets/profile.jpg";
+
 const skills=["Java","Python","SQL","JavaScript","HTML","CSS","OOPs","DBMS","SDLC","Data Structures","Git","GitHub","Power BI","Microsoft Excel"];
 const strengths=["Team Collaboration","Communication","Problem Solving","Adaptability"];
 
@@ -27,12 +29,21 @@ function App(){
       <div className="actions"><button className="primary" onClick={()=>go("projects")}>View my work <ArrowUpRight/></button><button className="secondary" onClick={()=>go("contact")}>Contact me <Mail/></button></div>
       <div className="meta"><span><MapPin/> Chennai, India</span><span><Code2/> Software Engineer</span></div>
      </div>
-     <div className="hero-card">
-      <div className="icon-orb"><BrainCircuit size={43}/></div>
-      <small>PROFILE</small><h3>Software Development + Data</h3>
-      <p>Java · Python · SQL · Web · Computer Vision · Power BI</p>
-      <div className="divider"/>
-      <div className="stat"><b>90%</b><span>CNN hazardous-object detection accuracy</span></div>
+     <div className="hero-profile-container">
+      <div className="hero-card hero-image-card">
+       <div className="hero-img-wrapper">
+        <img src={profileImg} alt="Mahendravarman N" className="hero-profile-img"/>
+        <div className="hero-img-overlay"></div>
+        <div className="hero-badge"><BrainCircuit size={14}/><span>Software Engineer</span></div>
+       </div>
+       <div className="hero-card-footer">
+        <small>PROFILE HIGHLIGHT</small>
+        <h3>Mahendravarman N</h3>
+        <p>B.Tech IT · Java · Python · SQL · Web & ML</p>
+        <div className="divider"/>
+        <div className="stat"><b>90%</b><span>CNN hazardous-object detection accuracy</span></div>
+       </div>
+      </div>
      </div>
     </div>
    </section>
