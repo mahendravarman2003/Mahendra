@@ -1,5 +1,19 @@
+# Dependencies
 node_modules/
-server/node_modules/
-server/.env
+*/node_modules/
+
+# Production build output
 dist/
+build/
+*/dist/
+
+# Environment variables & secrets
 .env
+.env.*
+!.env.example
+*.local
+
+# Vercel & system artifacts
+.vercel
+.DS_Store
+Thumbs.db
